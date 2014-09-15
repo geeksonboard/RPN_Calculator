@@ -1,0 +1,26 @@
+ Reverse Polish Notation Calculator
+ GeeksOnBoard 01.2014
+
+ Available operations:
+     "+" - addition           a+b; (a - first, b - second)
+     "-" - subtraction        a-b;
+     "*" - multiplicaion      a*b;
+     "/" - division           a/b;
+     "^" - exponentiation     a^b;
+     "s" - roots              a to b;
+     "%" - modulo a%b;
+     "l" - logarythm          log from a with b base;
+     
+ Special Characters:
+     "M" - Memorises number in cache;
+     "C" - Takes number from cache back to working memory;
+     "#" - Deletes last typed number;
+     "$" - The last two numbers change place;
+     "&" - Duplicates the last number;
+     "?" - Prints all typed arguments;
+     "q" - Quits;
+
+
+ ***Calculator operates only on inteegers***
+
+
