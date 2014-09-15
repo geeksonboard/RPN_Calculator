@@ -1,0 +1,31 @@
+# GeeksOnBoard
+# 01.2014
+# Makefile table version
+
+CC=gcc
+CFLAGS= -c -Wall --pedantic
+LFLAGS=-lm
+PLIKI=obj/main.o obj/tablice.o obj/rpn.o
+INCLUDY= inc/tablice.h inc/rpn.h
+ZRODLA=src/
+OBIEKTY=obj/
+INC=inc/
+BIN=RPN
+
+.PHONY: clean
+
+$(BIN): $(PLIKI)
+	$(CC) $^ -o $@ $(LFLAGS)
+
+clean:
+	rm -f $(OBIEKTY)*o 
+
+$(OBIEKTY)main.o: $(ZRODLA)main.c $(INCLUDY)
+	$(CC) $< -o $@ $(CFLAGS)
+
+$(OBIEKTY)tablice.o: $(ZRODLA)stos.c $(INC)tablice.h
+	$(CC) $< -o $@ $(CFLAGS)
+
+$(OBIEKTY)rpn.o: $(ZRODLA)rpn.c $(INC)rpn.h
+	$(CC) $< -o $@ $(CFLAGS)
+
